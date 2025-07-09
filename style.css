@@ -570,7 +570,7 @@ details[open] > p {
 .edu-list h3 {
   margin-bottom: 8px;
   font-size: 1.1rem;
-  color: var(--color-accent); /* 강조색 */
+  color: var(--skill-text); /* 강조색 */
 }
 
 .edu-list p {
