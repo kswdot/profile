@@ -36,6 +36,7 @@
   --contact-btn-hover: gray;
   --footer-bg: #eaeaea; 
   --footer-text: #666;
+  --color-accent: #f26b38;
 }
 
 body.dark-mode {
@@ -125,6 +126,10 @@ body {
   margin-bottom: -10px;
 }
 
+#hero .highlight {
+  color: var(--color-accent);
+  font-weight: 700;
+}
 
 #hero h1 span {
   color: var(--hero-text);
