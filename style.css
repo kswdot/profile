@@ -1,0 +1,585 @@
+:root {  
+  --body-bg: white;
+  --body-text: #111;
+  --hero-bg: #f6f8fa;
+  --hero-text: #111;
+  --nav-bg: darkgray;
+  --nav-text: white;
+  --nav-accent: rgb(232, 95, 95);
+  --toggle-text: white;
+  --skill-bg: #e1e8f0;
+  --skill-text: #333;
+  --project-bg: #f6f8fa;
+  --project-text: #555;
+  --project-hr: #ddd;
+  --project-hover: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+
+}
+
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* 공통 컨테이너 */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+/* Hero */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  background-color: var(--hero-bg);
+  padding-top: 80px;
+}
+
+#hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+#hero h1 span {
+  color: var(--hero-text);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Section 공통 */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 기본 설정 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 네비게이션 바 고정 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  z-index: 1000;
+}
+
+/* 왼쪽 이름 */
+.navbar-left .logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--nav-text);
+}
+
+/* 오른쪽 메뉴 */
+.navbar-right a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-right a:hover {
+  color: var(--nav-accent);
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  cursor: pointer;
+  color: var(--toggle-text);
+}
+
+
+/* About */
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Profile Image */
+.profile-img {
+  display: block;
+  width: 66%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Skills */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  background-color: var(--skill-bg);
+  color: var(--skill-text);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+/* Certificates */
+.certificate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Projects */
+.project {
+  background-color: var(--project-bg);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  margin-bottom: 20px;
+  max-width: 600px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.project hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid var(--project-hr);
+}
+
+.project p {
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--project-text);
+}
+
+.detail-link {
+  font-size: 0.9rem;
+  color: var(--project-text);
+  text-align: right;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px var(--project-hover);
+}
+
+/* Modals */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none !important;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px 30px 20px 40px;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.open-modal {
+  cursor: pointer;
+}
+
+/** Modal 디테일 **/
+/* 모달 기본 */
+.desk-modal {
+  max-width: 1000px;
+  padding: 30px 40px;
+}
+
+/* 상단 헤더 */
+.desk-header {
+  background: #f5f1ec;
+  padding: 30px 20px;
+  margin: -30px -40px 20px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+.desk-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project-sub {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* 설명 텍스트 */
+.modal-summary {
+  margin: 15px 0;
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+}
+
+/* 구분선 */
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+.section {
+  padding: 0 40px; /* 좌우 여백 추가 */
+  margin-bottom: 50px;
+}
+
+/* 주요 기능 */
+.implementation {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 10px 0 25px;
+  padding-left: 5px;
+}
+.implementation li {
+  font-size: 0.95rem;
+}
+
+/* 사용 기술 안내 텍스트 */
+.subtext {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* 아코디언 스타일 */
+details {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+/* summary 텍스트 스타일 */
+details summary {
+  position: relative;
+  padding: 8px 16px 8px 28px; /* 위, 오른쪽, 아래, 왼쪽 */
+  cursor: pointer;
+  background-color: #f0f0f0;
+  font-weight: 600;
+  list-style: none;
+}
+
+/* 기본 화살표 제거 (브라우저별 대응) */
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+}
+
+/* 커스텀 화살표 - 기본은 ▶ */
+details summary::before {
+  content: '▶';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.65rem;
+  color: #444;
+}
+
+/* 열렸을 때 ▼로 변경 */
+details[open] summary::before {
+  content: '▼';
+  font-size: 0.65rem;
+}
+
+/* 열렸을 때 summary와 본문 사이 간격 */
+details[open] summary {
+  margin-bottom: 5px;
+}
+
+/* 열렸을 때 내용 여백 */
+details[open] > p {
+  padding: 0 16px 6px 16px;
+}
+
+/* 이미지 */
+.gallery-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 30px 0 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 400px; /* 또는 100%로 하고 max-width 설정 */
+  max-width: 100%;
+  overflow: hidden; /* 반드시 부모에 줘야함 */
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  flex-shrink: 0;
+  width: 100%; /* 무조건 부모 크기에 맞게 */
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 1;
+}
+.carousel-btn.prev {
+    left: 10px;
+}
+.carousel-btn.next {
+    right: 10px;
+}
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-dots .dot.active {
+  background: #333;
+}
+
+/* 깃허브 링크 */
+.github-link {
+  text-align: center;
+  margin-top: 30px;
+}
+.github-link img {
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+.github-link img:hover {
+  transform: scale(1.1);
+}
+
+/* 숨김 */
+.hidden {
+  display: none !important;
+}
+
+
+/* Contact */
+.contact-section {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* 좌우 간격 줄임 */
+  padding: 40px 20px;
+  max-width: 900px; /* 너비 줄이기 */
+  margin: 0 auto;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.contact-title {
+  font-size: 2rem; /* or 1.5rem 등 certificate <h2>와 동일하게 */
+  text-align: center;
+  margin-bottom: 30px;
+  text-align: center; /* 또는 왼쪽 정렬하고 싶으면 left */
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info p {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-info a {
+  display: block;
+  margin-top: 4px;
+  color: #111;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-right .form-box {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-right label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+}
+
+.contact-right textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-right button {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: 0.2s ease;
+}
+
+.contact-right button:hover {
+  background: var(--gray);
+  color: var(--white);
+}
+
+
+/* Footer */
+footer {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

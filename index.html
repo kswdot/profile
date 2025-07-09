@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seongeun Kim</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="#hero" class="logo">Seongeun Kim</a>
+  </div>
+  <div class="navbar-right">
+    <a href="#about">About</a>
+    <a href="#skills">Skill</a>
+    <a href="#certificate">Certificate</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section id="hero" data-aos="fade-up">
+    <div class="container">
+      <h1>***한 줄 슬로건***</h1>
+      <h1><span>김성은</span></h1>
+      <p>Backend Web Developer</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <img src="https://placehold.co/600x400" alt="Seongeun Kim" class="profile-img" />
+      <p>***소개***</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <div class="container">
+      <h2>Skill</h2>
+      <ul class="skill-list">
+        <li>스택1</li>
+        <li>스택2</li>
+        <li>스택3</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certificate Section -->
+  <section id="certificate" data-aos="fade-up">
+  <div class="container">
+    <h2>Certificate</h2>
+    <ul class="certificate-list">
+      <li>자격증1 1111.11</li>
+      <li>자격증50 1111.11</li>
+      <li>자격증999 1111.11</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" data-aos="fade-up">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project open-modal" data-modal="modal1">
+      <h3>프로젝트1</h3>
+      <hr>
+      <p>프로젝트1 간단 설명</p>
+      <div class="detail-link">자세히 보기 &gt;</div>
+    </div>
+
+    <div class="project open-modal" data-modal="modal2">
+        <h3>프로젝트2</h3>
+        <hr>
+        <p>프로젝트2 간단 설명</p>
+        <div class="detail-link">자세히보기 &gt;</div>
+    </div>
+    </div>
+</section>
+
+<!-- Modal Section -->
+<div class="modal hidden" id="modal1">
+  <div class="modal-content desk-style">
+    <span class="close">&times;</span>
+
+    <div class="desk-header">
+      <h2><strong>프로젝트1</strong></h2>
+      <p class="project-sub">2024.07 - </p>
+    </div>
+
+    <div class="modal-summary">
+      <p>********************프로젝트 설명1***********************</p>
+      <p>********************프로젝트 설명2***********************</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="section">
+      <h3>🐝 주요 기능 및 특징</h3>
+      <ul class="implementation">
+        <li>네이버, 구글 로그인</li>
+        <li>나만의 무드 찾기, 무드 보드 만들기</li>
+        <li>무드 즐겨찾기</li>
+        <li>게시글 작성, 수정, 삭제, 투표하기</li>
+        <li>주제 기반 사용자와 게시판 공유</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🛠️ 사용 기술 및 언어</h3>
+      <p class="subtext">클릭 시 세부 내용을 확인할 수 있습니다.</p>
+      <details open>
+        <summary> Next.js</summary>
+        <p>React 컴포넌트 기반으로 하며, 가상 DOM을 활용해 웹 애플리케이션의 성능을 최적화 합니다. 컴포넌트 재사용성을 높이고, 상태 관리를 용이하게 할 수 있습니다.</p>
+      </details>
+      <details>
+        <summary> TypeScript</summary>
+        <p>정적 타입 언어로 코드 작성 시 오류를 줄이고 유지보수성을 향상시킬 수 있습니다.</p>
+      </details>
+      <details>
+        <summary> Recoil</summary>
+        <p>React 상태 관리 라이브러리로, 전역 상태를 단순하고 직관적으로 관리할 수 있습니다.</p>
+      </details>
+      <details>
+        <summary> Tanstack Query</summary>
+        <p>서버 상태를 효과적으로 관리하며, 데이터 캐싱, 요청 중복 제거 등에 활용됩니다.</p>
+      </details>
+      <details>
+        <summary> CSS Module</summary>
+        <p>컴포넌트 단위 스타일링을 지원하여 클래스 이름 충돌을 방지하고, 유지보수를 쉽게 할 수 있습니다.</p>
+      </details>
+    </div>
+
+    
+
+    <!-- 갤러리 섹션 -->
+<div class="section" data-aos="fade-up">
+  <h3 class="gallery-title">🖼 구현 사진 </h3>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="https://placehold.co/400x300" alt="스크린샷1" />
+      <img src="https://placehold.co/400x300" alt="스크린샷2" />
+      <img src="https://placehold.co/400x300" alt="스크린샷3" />
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="github-link">
+      <a href="https://github.com/kswdot/deskMood" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+  <h2 class="contact-title">Contact</h2>
+
+  <div class="contact-content">
+    <div class="contact-left">
+      <div class="contact-info">
+        <p>
+          <i class="fa-solid fa-envelope"></i><strong>    MAIL</strong><br />
+          <a href="mailto:example@gmail.com">rlatjddms7a@naver.com</a>
+        </p>
+        <p>
+          <i class="fa-brands fa-github"></i><strong>    GITHUB</strong><br />
+          <a href="https://github.com/kswdot" target="_blank">github.com/kswdot</a>
+        </p>
+        <p>
+          <i class="fa-solid fa-blog"></i><strong>    BLOG</strong><br />
+          <a href="https://yourblog.com" target="_blank">yourblog.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="form-box">
+        <form id="contact-form" action="https://formspree.io/f/mjkrqjpr" method="POST">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="성함을 입력해주세요." required />
+
+          <label>Mail</label>
+          <input type="email" name="email" placeholder="메일 주소를 입력해주세요." required />
+
+          <label>Message</label>
+          <textarea name="message" placeholder="내용을 입력해주세요." required></textarea>
+
+          <button type="submit">메일 보내기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Seongeun Kim</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+
+
+
+
+
+<!-- Modal JS -->
+<script>
+  // 모달 열기
+  document.querySelectorAll('.open-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.dataset.modal;
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.remove('hidden');
+    });
+  });
+
+  // 모달 닫기 (X 버튼 또는 바깥 영역 클릭 시)
+  document.querySelectorAll('.modal .close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.modal').classList.add('hidden');
+    });
+  });
+
+  window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+      e.target.classList.add('hidden');
+    }
+  });
+
+  // ESC 키 누르면 모달 닫기
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.classList.add('hidden');
+      });
+    }
+  });
+
+  // 모든 탭 메뉴 처리 (모달별 독립적으로)
+  document.querySelectorAll('.desk-tabs').forEach(tabs => {
+    const tabButtons = tabs.querySelectorAll('.tab-btn');
+    const tabPanels = tabs.parentElement.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 버튼 스타일 초기화
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // 탭 패널 숨기기/보이기
+        const targetId = btn.dataset.tab;
+        tabPanels.forEach(panel => panel.classList.add('hidden'));
+        tabs.parentElement.querySelector(`#${targetId}`).classList.remove('hidden');
+      });
+    });
+  });
+</script>
+
+
+<!-- Image JS -->
+<script>
+const track = document.querySelector(".carousel-track");
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector(".carousel-btn.next");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const dots = document.querySelectorAll(".dot");
+
+let currentIndex = 0;
+
+function updateCarousel(index) {
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel(currentIndex);
+});
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel(currentIndex);
+});
+dots.forEach((dot, idx) => {
+  dot.addEventListener("click", () => {
+    currentIndex = idx;
+    updateCarousel(currentIndex);
+  });
+});
+
+// 클릭 시 확대 (모달)
+slides.forEach(img => {
+  img.addEventListener("click", () => {
+    const src = img.getAttribute("src");
+    const zoom = document.createElement("div");
+    zoom.innerHTML = `<div class="zoom-overlay"><img src="${src}" /></div>`;
+    document.body.appendChild(zoom);
+
+    zoom.querySelector(".zoom-overlay").addEventListener("click", () => {
+      zoom.remove();
+    });
+  });
+});
+</script>
+
+
+<!-- Formspree JS -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+  const action = 'https://formspree.io/f/mjkrqjpr'; 
+
+  try {
+    const response = await fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      alert('메일이 성공적으로 전송되었습니다!');
+      form.reset();
+    } else {
+      alert('메일 전송에 실패했습니다. 다시 시도해주세요.');
+    }
+  } catch (error) {
+    alert('오류가 발생했습니다.');
+    console.error(error);
+  }
+});
+</script>
+
+<style>
+.zoom-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+</style>
